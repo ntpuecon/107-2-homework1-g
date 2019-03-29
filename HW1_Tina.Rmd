@@ -111,6 +111,9 @@ $$個經PR_i=\beta_0+\beta_1 可修個體_i+經原PR_i+\epsilon_i.$$
 請計算**可修個體**為1與0兩群人的**經原PR平均**及**個經PR平均**。（hint: 可利用dplyr套件下的`group_by()`,`summarise()`，及`mean( ,na.rm=T)`, na.rm=T表示計算時排除NA值） 
 
 ```{r ans17}
+mutate(hw1Data,個經PR平均=mean(個經PR,na.rm=T)) -> hw1Data
+group_by(hw1Data,可修個體=1 )
+summary(hw1Data)
 ```
 
 
