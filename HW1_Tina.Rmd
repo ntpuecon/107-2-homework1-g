@@ -81,6 +81,11 @@ hw1Data <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/mas
 請進行OLS估計前述的簡單迴歸模型。（注意估計式標準誤必需使用穩健標準誤robust standard error，即使用三明治及HC調整後的標準誤。）
 
 ```{r ans13}
+library(sandwich)
+library(dplyr)
+library(lmtest)
+lm(個經PR ~ 可修個體,hw1Data) ->MODEL1
+coeftest(MODEL1,vcov. =vcovHC,type="HC1")
 ```
 
 ## 1.4 選擇性偏誤
