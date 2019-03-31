@@ -118,15 +118,13 @@ coeftest(Model2,vcov. = vcovHC,type="HC1")
 
 ```{r ans17}
 library(dplyr)
-group_by(hw1Data,可修個體=1)->可修個體_1
-summarise(可修個體_1,mean(,經原PR,na.rm=T),mean(,個經PR,na.rm=T))
-group_by(hw1Data,可修個體=0)->可修個體_0
-summarise(可修個體_0,mean(經原PR,na.rm=T),mean(個經PR,na.rm=T))
+group_by(hw1Data,可修個體)%>%
+summarise(mean(經原PR,na.rm=T),mean(個經PR,na.rm=T))
 ```
 
 ```{r ans17}
 library(dplyr)
-summarise(group_by(hw1Data,可修個體=1),mean(經原PR,na.rm=T),mean(個經PR,na.rm=T))
+summarise(group_by(hw1Data,可修個體),mean(經原PR,na.rm=T),mean(個經PR,na.rm=T))
 ```
 
 ## 1.8 偏誤方向
