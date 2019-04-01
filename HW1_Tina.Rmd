@@ -172,6 +172,24 @@ $$\hat{\beta}_1=\bar{y}_1-\bar{y}_0,$$
 
   (a) $E(\hat{\beta}_1)=\beta_1$
   
+  $$\hat{\beta}_1=\frac{\sum_{i=1}^N (x_i-\bar{x})(y_i-\bar{y})}{\sum_{i=1}^N (x_i-\bar{x})^2}$$ =
+  
+  $$\frac{\sum_{i=1}^N (x_i-\bar{x})y_i}{\sum_{i=1}^N (x_i-\bar{x})^2}$$ =
+    
+  $$\frac{\sum_{i=1}^N (x_i-\bar{x})(\beta_0+\beta_1x_i+\epsilon_i)}{\sum_{i=1}^N (x_i-\bar{x})^2}$$=
+      
+      
+  $$\beta_1\frac{\sum_{i=1}^N (x_i-\bar{x})x_i}{\sum_{i=1}^N (x_i-\bar{x})^2}+\frac{\sum_{i=1}^N (x_i-\bar{x})\epsilon_i}{\sum_{i=1}^N (x_i-\bar{x})^2}$$=
+        
+        
+  $$\beta_1+\frac{\sum_{i=1}^N (x_i-\bar{x})\epsilon_i}{\sum_{i=1}^N (x_i-\bar{x})^2}$$
+        
+  because $E(\hat{\beta}_1)=\beta_1$
+          
+  $$E(\hat{\beta}_1|x)=E[\beta_1+\frac{\sum_{i=1}^N (x_i-\bar{x})\epsilon_i}{\sum_{i=1}^N (x_i-\bar{x})^2}|x]=\beta_1+0$$
+  
+  $$E(\hat{\beta}_1)=E(E(\hat{\beta}_1|x))=\beta_1$$
+  
   (b) 若條件在已知已知每個觀測值的$x_i$為1或0下$V(\epsilon_i|x_i)=\sigma^2$（即齊質變異），則條件變異數$V(\hat{\beta}_1|X)=\frac{n}{n_1 n_0}\sigma^2$。
   
   (c) 若考慮異質變異$V(\epsilon_i|x_i)=\sigma_i^2$，則條件變異數$V(\hat{\beta}_1|X)=\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}$。
