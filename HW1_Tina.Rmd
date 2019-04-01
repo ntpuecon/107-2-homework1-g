@@ -224,4 +224,4 @@ $$\hat{\beta}_1=\bar{y}_1-\bar{y}_0,$$
 ## 2.3 三明治表示式
 線性迴歸模型
 $Y=X\beta+\epsilon$
-的OLS估計式$\hat{\beta}=(X'X)^{-1}(X'Y)$。條件在已知$X$下，令$V(\epsilon|X)=\Sigma$。請證明$V(\hat{\beta}|X)=(X'X)^{-1}\Sigma (X'X)$，具有三明治形式（即可表示成$BMB'$的矩陣相乘形式）。
+的OLS估計式$\hat{\beta}=(X'X)^{-1}(X'Y)$。條件在已知$X$下，令$V(\epsilon|X)=\Sigma$。請證明$V(\hat{\beta}|X)=(X'X)^{-1}X'\Sigma X (X'X)$，具有三明治形式（即可表示成$BMB'$的矩陣相乘形式）。
