@@ -24,15 +24,10 @@ params:
 網頁：`r params$url` 
 
 ***
-
-
 ```{r setup, include=FALSE}
 
 ```
 
-```{r}
-
-```
 ##1-1
 
 $Y=Y_{-p}+{\beta}^\star P$ \
@@ -40,7 +35,7 @@ $Y=Y_{-p}+{\beta}^\star P$ \
  $=E[E(Y_{-p}|rincome)+\tilde{\epsilon}|P]+{\beta}^{\star}P$ \
  $=E(2+3rincome+\tilde{\epsilon}|P)+{\beta}^{\star}P$ \
  $=2+3E(rincome|P)+E(\tilde{\epsilon}|P)+{\beta}^{\star}P$ \
- $=2+{\beta}^{\star}P $ \
+ $=2+\beta^{\star}P$ \
  其中$rincome ⊥ P$則 $E(rincome|P)=0$ \
  $\tilde{\epsilon}⊥ P則 E(\tilde{\epsilon}|P)=0$ \
  
@@ -54,8 +49,8 @@ $E(Y|P)=E(2+3rincome|P)+E(\tilde{\epsilon}|P)+{\beta^\star}P$ \
       $=2+3E(rincome|P)+{\beta^\star}P$ \
       $=2+3(0.5+P)+{\beta^\star}P$ \
       $=3.5+(3+{\beta^\star})P$ \
-      由此過程可以得知，$E(Y|P)中P的係數不等於{\beta^\star}$
-
+      由此過程可以得知，$E(Y|P)中P的係數不等於{\beta^\star}$ \
+ \
 
 $E(Y|P,rincome)=E(Y_{-P}+{\beta^\star}P|P,rincome)$ \
               $=E[E(Y_{-P}|rincome)+\tilde{\epsilon}|P,rincome]+{\beta^\star}P$ \
@@ -71,8 +66,8 @@ $E(Y|P)=E(Y_{-p}+\beta^*P|P)$ \
       $=2+3E(rincome|P)+0.5+2P+\beta^*P$ \
       $=2+3(0.5+P)+0.5+2P+\beta^*P$ \
       $=4+(5+\beta^*)P$  \
-      由此過程可以得知，其中$5+\beta^*$不等於$\beta^*$
-
+      由此過程可以得知，其中$5+\beta^*$不等於$\beta^*$ \
+ \
 $E(Y|P,rincome)=E(Y_{-p}+\beta^*P|P,rincome)$ \
               $=E(E(Y_{-p}|rincome)+\tilde{\epsilon}|P,rincome]+\beta^*P$ \
               $=2+3rincome+E(\tilde{\epsilon}|P,rincome)+\beta^*P$ \
@@ -99,18 +94,11 @@ $E(Y|P,rincome,Z)=E(Y_{-p}+{\beta}^{\star}p|p,rincome,Z)$ \
                 $=E[E(Y_{-p}|rincome)+\tilde{\epsilon}|p,rincome,Z]+\beta^{\star}p$ \
                 $=2+3rincome+E(\tilde{\epsilon}|p,rincome,Z)+\beta^{\star}p$ \
                 $=2+3erincome+\beta^{\star}$ \
-                其中$E(\tilde{\epsilon}|p,rincome,Z)=E[Y_{-p}-E(Y_{-p}|rincome|p,rincome,Z)]$ \
+                \
+                
+                其中 \
+                $E(\tilde{\epsilon}|p,rincome,Z)=E[Y_{-p}-E(Y_{-p}|rincome|p,rincome,Z)]$ \
                 $=E[Y_{-p}|p,rincome,Z]-E(Y_-p|rincome)|p,rincome,Z]$ \
                 $=E(Y_{-p}|p,rincome,Z)-E(Y_-p|p,rincome,Z)=0$ \
                 由此過程可以得知，$E(Y|P,rincome,z)$其中$P$的係數不會為$\beta^*$
-```{r}
 
-```
-
-```{r}
-
-```
-
-```{r}
-
-```
