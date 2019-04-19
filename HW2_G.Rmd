@@ -1,28 +1,78 @@
 ---
-title: "HW2"
-output: html_document
+title: "作業1"
+output: 
+  html_document: 
+    toc: true
+    toc_depth: 1
+    number_sections: false
+    toc_float:
+      collapsed: true
+      smooth_scroll: false
+params:
+  name: ["黃鉦翔","林應廷","張又方","劉婷軒"]
+  id: [710761121,710761129,710761103,710761130]
+  group: "teamG"
+  url: ""
 ---
+請依狀況更改上面的name,id及group（分別代表組員姓名，學號及組號），但請勿更改下面三行的設定。  
+
+***
+
+姓名：`r params$name`  
+學號：`r params$id`  
+組號：`r params$group`  
+網頁：`r params$url` 
+
+***
+
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+
 ```
 
-## R Markdown
+```{r}
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+```
+##1-1
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+$Y=Y_{-p}+{\beta}^\star P$
+$=E(Y|P)= E(Y_{-p})+{\beta}^\star P|P)$
+$=E[E(Y_{-p}|rincome)+\tilde{\epsilon}|P]+{\beta}^{\star}P$
+$=E(2+3rincome+\tilde{\epsilon}|P)+{\beta}^{\star}P$
+$=2+3E(rincome|P)+E(\tilde{\epsilon}|P)+{\beta}^{\star}P$
+$=2+{\beta}^{\star}P $
+其中$rincome ⊥ P$則 $E(rincome|P)=0$
+$\tilde{\epsilon}⊥ P則 E(\tilde{\epsilon}|P)=0$
 
-```{r cars}
-summary(cars)
+##1-2
+
+##1-3
+
+$E(Y|P)=E(Y_{-p}+\beta^*P|P)$
+$=E[E(Y_{-p}|rincome)+\tilde{\epsilon}|P]+\beta^*P$
+$=E(2+3rincome|P)+E(\tilde{\epsilon}|P)+\beta^*P$
+$=2+3E(rincome|P)+0.5+2P+\beta^*P$
+$=2+3(0.5+P)+0.5+2P+\beta^*P$
+$=4+(5+\beta^*)P$ 其中$5+\beta^*$不等於$\beta^*$
+
+$E(Y|P,rincome)=E(Y_{-p}+\beta^*P|P,rincome)$
+$=E(E(Y_{-p}|rincome)+\tilde{\epsilon}|P,rincome]+\beta^*P$
+$=2+3rincome+E(\tilde{\epsilon}|P,rincome)+\beta^*P$
+$=2+3rincome+0.5+2P+\beta^*P$
+$=2.5+3rincome+(2+\beta^*)P$ 其中$2+\beta^*$不等於$\beta^*$
+
+
+##1-4
+
+##1-5
+```{r}
+
 ```
 
-## Including Plots
+```{r}
 
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+```{r}
+
+```
